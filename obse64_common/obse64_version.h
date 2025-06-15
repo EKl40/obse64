@@ -4,8 +4,8 @@
 // these have to be macros so they can be used in the .rc
 #define OBSE_VERSION_INTEGER		0
 #define OBSE_VERSION_INTEGER_MINOR	2
-#define OBSE_VERSION_INTEGER_BETA	0
-#define OBSE_VERSION_VERSTRING		"0, 0, 2, 0"
+#define OBSE_VERSION_INTEGER_BETA	1
+#define OBSE_VERSION_VERSTRING		"0, 0, 2, 1"
 #define OBSE_VERSION_PADDEDSTRING	"0001"
 #define OBSE_VERSION_RELEASEIDX		1
 
@@ -40,7 +40,7 @@
 // information about the state of the game at the time of release
 #define OBSE_TARGETING_BETA_VERSION	0
 #define CURRENT_RELEASE_RUNTIME		RUNTIME_VERSION_1_511_102
-#define CURRENT_RELEASE_OBSE_STR	"0.2.0"
+#define CURRENT_RELEASE_OBSE_STR	"0.2.1"
 
 #if GET_EXE_VERSION_SUB(RUNTIME_VERSION) == RUNTIME_TYPE_BETHESDA
 #define SAVE_FOLDER_NAME "Oblivion Remastered"
