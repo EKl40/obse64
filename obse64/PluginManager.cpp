@@ -451,7 +451,8 @@ struct PluginCompatEntry
 
 static const PluginCompatEntry	kPluginCompatList[] =
 {
-	{	nullptr, 0, nullptr }
+	{	"Better Autowalk",	2,	"not version independent",	kCompat_NotVersionIndependent },	// uses hardcoded addresses, not signatures
+	{	nullptr, 0, nullptr },
 };
 
 const char * PluginManager::checkPluginCompatibility(const OBSEPluginVersionData & version)
