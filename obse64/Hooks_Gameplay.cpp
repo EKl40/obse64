@@ -2,8 +2,8 @@
 #include "obse64_common/BranchTrampoline.h"
 #include "obse64_common/Relocation.h"
 
-RelocAddr <uintptr_t> OblivionThread_Target(0x065CF640 + 0x1208);
-RelocAddr <uintptr_t> UnrealGameThread_Target(0x03907F30 + 0x53);
+RelocAddr <uintptr_t> OblivionThread_Target(0x065D2070 + 0x1208);
+RelocAddr <uintptr_t> UnrealGameThread_Target(0x03907660 + 0x53);
 
 void OblivionThreadHook(const char * dbgStr)
 {

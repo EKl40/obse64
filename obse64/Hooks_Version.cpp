@@ -11,8 +11,8 @@ const wchar_t* hHook_ShowVersion_FormatString =
 	__PREPRO_TOKEN_STR__(OBSE_VERSION_INTEGER_BETA) "]";
 
 typedef void (*_FormatVersion)(void*, const wchar_t*, const wchar_t*, const wchar_t*, const wchar_t*);
-RelocAddr<_FormatVersion> ShowVersion_Call(0x0491AE10 + 0x2E2);
-RelocAddr<_FormatVersion> ShowVersion_Original(0x00DE1E60);
+RelocAddr<_FormatVersion> ShowVersion_Call(0x0491BCB0 + 0x2E2);
+RelocAddr<_FormatVersion> ShowVersion_Original(0x00DE3DF0);
 
 void ShowVersion_Hook(void* a_unk, const wchar_t*, const wchar_t* a_ver, const wchar_t* a_appID, const wchar_t* a_cID)
 {

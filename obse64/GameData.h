@@ -86,7 +86,7 @@ public:
 	static TESDataHandler * GetSingleton();
 
 	MEMBER_FN_PREFIX(TESDataHandler);
-	DEFINE_MEMBER_FN(UnkInit, void, 0x0662B9C0);
+	DEFINE_MEMBER_FN(UnkInit, void, 0x0662E470);
 };
 
 static_assert(sizeof(TESDataHandler) == 0x1860);

@@ -1,6 +1,6 @@
 #include "UnrealTypes.h"
 
-RelocPtr <FNameStorage> g_fnameStorage(0x09061500);
+RelocPtr <FNameStorage> g_fnameStorage(0x0906C780);
 
 FNameEntry * FNameStorage::Get(u32 idx)
 {

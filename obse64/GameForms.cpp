@@ -3,7 +3,7 @@
 #include "GameObjects.h"
 #include "GameExtraData.h"
 
-RelocAddr <_LookupFormByID> LookupFormByID(0x0660EA00);
+RelocAddr <_LookupFormByID> LookupFormByID(0x066114B0);
 
 enum
 {

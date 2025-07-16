@@ -34,7 +34,7 @@ struct ParamTypeInfo
 };
 
 // may need to patch/redirect this as well
-RelocPtr <ParamTypeInfo> g_paramTypeInfo(0x08FB9030);
+RelocPtr <ParamTypeInfo> g_paramTypeInfo(0x08FC42C0);
 
 class HookedCommandTable
 {
@@ -264,38 +264,38 @@ enum CmdTablePatchType
 
 HookedCommandTable::PatchInfo kCmdTableStartPatches[] =
 {
-	{ 0x06942B70 + 0x0D0D + 0, 0, kPatchType_LeaToLoadBase },
+	{ 0x069475D0 + 0x0D0D + 0, 0, kPatchType_LeaToLoadBase },	// 1
 
-	{ 0x06946570 + 0x04C2 + 0, 0, kPatchType_LeaToLoadBase },
+	{ 0x0694AFD0 + 0x04C2 + 0, 0, kPatchType_LeaToLoadBase },	// 2
 
-	{ 0x06963520 + 0x006C + 0, 0, kPatchType_LeaToLoadBase },
+	{ 0x06967F80 + 0x006C + 0, 0, kPatchType_LeaToLoadBase },	// 3
 
-	{ 0x06A095C0 + 0x009B + 0, 0, kPatchType_LeaToLoadBase },
+	{ 0x06A0E020 + 0x009B + 0, 0, kPatchType_LeaToLoadBase },	// 4
 	
-	{ 0x069440C0 + 0x0066 + 0, offsetof(CommandInfo, shortName), kPatchType_LeaToLoadBase },
-	{ 0x069440C0 + 0x0122 + 0, offsetof(CommandInfo, opcode), kPatchType_LeaToLoadBase },
-	{ 0x069440C0 + 0x0129 + 3, 0, kPatchType_WriteOffset32 },
+	{ 0x06948B20 + 0x0066 + 0, offsetof(CommandInfo, shortName), kPatchType_LeaToLoadBase },	// 5
+	{ 0x06948B20 + 0x0122 + 0, offsetof(CommandInfo, opcode), kPatchType_LeaToLoadBase },		// 5
+	{ 0x06948B20 + 0x0129 + 3, 0, kPatchType_WriteOffset32 },									// 5
 
 	{ 0, 0, kPatchType_End }
 };
 
 HookedCommandTable::PatchInfo kCmdTableEndPatches[] =
 {
-	{ 0x069440C0 + 0x006D + 0, offsetof(CommandInfo, shortName) + sizeof(CommandInfo), kPatchType_LeaToLoadBase },
+	{ 0x06948B20 + 0x006D + 0, offsetof(CommandInfo, shortName) + sizeof(CommandInfo), kPatchType_LeaToLoadBase },	// 5
 
 	{ 0, 0, kPatchType_End }
 };
 
 HookedCommandTable::PatchInfo kCmdTableLenPatches[] =
 {
-	{ 0x06942B70 + 0x0CFC + 1, u32(-1), kPatchType_Data32 },
+	{ 0x069475D0 + 0x0CFC + 1, u32(-1), kPatchType_Data32 },	// 1
 
-	{ 0x06946570 + 0x04AF + 2, u32(-1), kPatchType_Data32 },
+	{ 0x0694AFD0 + 0x04AF + 2, u32(-1), kPatchType_Data32 },	// 2
 
-	{ 0x06A095C0 + 0x00A2 + 1, 0, kPatchType_Data32 },
+	{ 0x06A0E020 + 0x00A2 + 1, 0, kPatchType_Data32 },			// 4
 
-	{ 0x069FE150 + 0x008A + 2, 0x1000, kPatchType_Data32 },
-	{ 0x069FE150 + 0x01B9 + 2, 0x1000, kPatchType_Data32 },
+	{ 0x06A02BB0 + 0x008A + 2, 0x1000, kPatchType_Data32 },		// 6
+	{ 0x06A02BB0 + 0x01B9 + 2, 0x1000, kPatchType_Data32 },		// 6
 
 	{ 0, 0, kPatchType_End }
 };
@@ -469,10 +469,10 @@ u16 GetNumParameters(u32 cmdIdx)
 	return g_commandTable.GetByIdx(cmdIdx)->numParams;
 }
 
-RelocAddr <decltype(&IsScriptCmdParamAForm)> IsScriptCmdParamAForm_Original(0x06A44C10);
-RelocAddr <decltype(&IsScriptCmdParamARefr)> IsScriptCmdParamARefr_Original(0x06A44BC0);
-RelocAddr <decltype(&GetCommandInfo)> GetCommandInfo_Original(0x06944240);
-RelocAddr <decltype(&GetNumParameters)> GetNumParameters_Original(0x06A44BA0);
+RelocAddr <decltype(&IsScriptCmdParamAForm)> IsScriptCmdParamAForm_Original(0x06A49650);
+RelocAddr <decltype(&IsScriptCmdParamARefr)> IsScriptCmdParamARefr_Original(0x06A49600);
+RelocAddr <decltype(&GetCommandInfo)> GetCommandInfo_Original(0x06948CA0);
+RelocAddr <decltype(&GetNumParameters)> GetNumParameters_Original(0x06A495E0);
 
 void Hooks_Script_Apply()
 {

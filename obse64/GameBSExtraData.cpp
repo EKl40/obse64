@@ -3,7 +3,7 @@
 #include "obse64_common/Log.h"
 #include <Windows.h>
 
-RelocPtr <CRITICAL_SECTION> g_extraListCS(0x09474300);
+RelocPtr <CRITICAL_SECTION> g_extraListCS(0x0947FF00);
 
 void BaseExtraList::Lock()
 {

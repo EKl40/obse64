@@ -1,12 +1,12 @@
 #include "UnrealAPI.h"
 
-RelocPtr <UEngine> g_ueEngine(0x092734C0);
+RelocPtr <UEngine> g_ueEngine(0x0927E7D8);
 
 typedef void (* _FMemory_Free)(void * buf);
-RelocAddr <_FMemory_Free> FMemory_Free(0x00E24570);
+RelocAddr <_FMemory_Free> FMemory_Free(0x00E26500);
 
 typedef void * (*_FMemory_Alloc)(size_t size, u32 align);
-RelocAddr <_FMemory_Alloc> FMemory_Alloc(0x00E30FB0);
+RelocAddr <_FMemory_Alloc> FMemory_Alloc(0x00E32F40);
 
 void FMemory::Free(void * buf)
 {
