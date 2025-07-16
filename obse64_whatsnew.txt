@@ -1,6 +1,11 @@
+0.2.2
+- support for 1.512.105
+- more class docs
+
 0.2.1
 - update address library url now that it exists
 - user configs are setting bad working directories that break some plugins. fix working directory on startup
+- support for 1.511.102
 
 0.2.0
 - obscript command table hooked

@@ -1,11 +1,11 @@
-Oblivion Remastered Script Extender v0.2.1 alpha
+Oblivion Remastered Script Extender v0.2.2 alpha
 by Ian Patterson
 
 The Oblivion Remastered Script Extender, or OBSE64 for short, is a modder's resource that expands the modding capabilities of Oblivion Remastered. We'll see where modding for this game goes - many things can be done from the embedded engine side, and other things can be done from the Unreal side, but communication back and forth is a problem. Support for classic OBSE's functionality is complete through release 6.
 
 [ Compatibility ]
 
-OBSE64 will support the latest version of Oblivion Remastered available on Steam, currently 1.511.102.0. The Gamepass/MS Store/EGS version is unsupported. Do not email asking for support.
+OBSE64 will support the latest version of Oblivion Remastered available on Steam, currently 1.512.105.0. The Gamepass/MS Store/EGS version is unsupported. Do not email asking for support.
 
 [ Installation ]
 
